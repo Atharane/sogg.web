@@ -14,7 +14,8 @@ export async function POST(request: Request) {
       };
     };
 
-    const moisture = body.data.value;
+    const moisture = Math.round(100 - (body.data.value / 4095) * 100);
+    console.log("✱ ⟶ route.ts ⟶ POST ⟶ moisture:", moisture);
     await supabase.from("logs").insert([
       {
         device: 1,
