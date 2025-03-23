@@ -1,0 +1,17 @@
+{
+  "importOrder": [
+    "^(server-only|client-only)$",
+    "^@?\\w(?!.*icons)",
+    "^@?\\w.*icons",
+    "^@/(?!.*icons)(.*)$",
+    "^@/.*icons",
+    "^[./](?!.*icons)",
+    "^[./].*icons"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ]
+}
